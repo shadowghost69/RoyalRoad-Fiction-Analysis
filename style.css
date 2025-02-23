@@ -151,6 +151,10 @@ table {
 	border-spacing: 2px;
 	border-radius: 2%;
 }
+.red {
+	background: #af1b1a;
+	border: 2px solid #ff2b4a;
+}
  table td {
      margin: 3px;
      text-align: center;
@@ -207,3 +211,15 @@ to {transform: rotate(-360deg)}
 #C4 {rotate: 90deg; animation-delay: 0.6s;}
 #C5 {rotate: 120deg; animation-delay: 0.8s;}
 
+@keyframes fadeOut {
+0% {opacity: 1; translate: -10px 0 ;}
+20% {opacity: 1; translate: 10px 0 ;}
+40% {opacity: 1; translate: -10px 0 ;}
+60% {opacity: 1; translate: 0 0 ;}
+100% {opacity: 0; translate: 0 0 ;}
+
+}
+.alert {
+animation: fadeOut 1s ease-out;
+opacity: 0;
+}
