@@ -7,6 +7,22 @@ const loading = `
 <div class="circle" id="C4"></div>
 <div class="circle" id="C5"></div>
 `
+const error = `
+<table class="red">
+<tbody>
+<th> Error !</th>
+</tbody>
+</table>
+`
+function getError(){
+let errormsg = document.createElement("div");
+errormsg.className = "alert";
+errormsg.innerHTML = error;
+document.body.appendChild(errormsg);
+setTimeout(()=>{errormsg.remove()}, 1000);
+
+
+}
 function format(num) {
 
 return String(num).replace(/\B(?=(\d{3})+(?!\d))/g, ",")
@@ -101,6 +117,8 @@ document.body.appendChild(elem)
 
     } catch (error) {
         console.log(error);
+        load.remove();
+        getError();
     }
 }
 function getData() {
