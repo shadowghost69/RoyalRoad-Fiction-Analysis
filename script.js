@@ -39,10 +39,12 @@ function numberToTime(x) {
 
 
 async function scrapeData(link) {
-    try {
         let load = document.createElement("div");
-        load.className = "circleContainer"
+        load.className = "circleContainer";
         load.innerHTML = loading;
+    try {
+
+
         document.body.appendChild(load);
         const response = await fetch("https://api.allorigins.win/raw?url=" + link);
         const html = await response.text();
